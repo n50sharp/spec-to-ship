@@ -1,3 +1,8 @@
+<!-- status:start -->
+> **Status: Active** (checked 2026-11-03) 
+> Stable skill; maintained as the toolkits it orders change.
+<!-- status:end -->
+
 # spec-to-ship
 
 A Hermes Agent skill that runs one build pipeline across three toolkits:

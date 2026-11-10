@@ -15,13 +15,17 @@ It does not copy their text. It orders their skills, picks one owner per overlap
 
 ## Requirements
 
-Install the three toolkits first:
+Spec-kit needs Python 3.11+ and [uv](https://docs.astral.sh/uv/). Install the three toolkits, then create the Hermes integration in the project you want to build:
 
-- spec-kit CLI and skills (`specify init <dir> --integration hermes`)
-- OMH plugin and skills
-- Superpowers plugin
+```
+uv tool install specify-cli
+hermes skills tap add witt3rd/oh-my-hermes
+hermes skills install omh-deep-research omh-deep-interview omh-ralplan omh-ralph
+hermes plugins install obra/superpowers --enable
+specify init <dir> --integration hermes --ignore-agent-tools
+```
 
-Check what is missing:
+Check what is missing (run from this repo, or after installation):
 
 ```
 bash skills/spec-to-ship/scripts/check.sh
@@ -37,7 +41,7 @@ Besides code and tests, every build ships its documents in `specs/<NNN>-<name>/d
 | `architecture.md` (context, components, data flow, ADRs, risks) | Plan |
 | `design.md` (modules, interfaces, data model, errors, security) | Plan |
 | `test-plan.md` (strategy, cases mapped to acceptance criteria) | Tasks |
-| `test-report.md` (commands run, real output, gaps) | Close |
+| `test-report.md` (commands run, real output, gaps) | Execute to Close |
 | README / `runbook.md` (install, run, operate, roll back) | Close |
 
 At Close, each doc is reconciled with the built code; a doc that disagrees with the code fails the stage. Templates: `skills/spec-to-ship/references/deliverables.md`.
@@ -49,18 +53,20 @@ git clone https://github.com/n50sharp/spec-to-ship.git
 bash spec-to-ship/install.sh
 ```
 
-This copies `skills/spec-to-ship` to `~/.hermes/skills/software-development/spec-to-ship`. Restart the gateway so the skill loads.
+This copies `skills/spec-to-ship` to `~/.hermes/skills/software-development/spec-to-ship`. Restart any active Hermes sessions so the skill loads.
 
 ## Use
 
-Ask Hermes to build something non-trivial. The skill's stages run in order: setup, research, constitution, intent, specify, plan, tasks, bridge, execute, close, with the deliverable docs written along the way. See `skills/spec-to-ship/SKILL.md` and `references/`.
+Ask Hermes to build something non-trivial. The skill's stages run in order: setup, research, constitution, intent, specify, plan, tasks, bridge, execute, close, with the deliverable docs written along the way. See `skills/spec-to-ship/SKILL.md` and `skills/spec-to-ship/references/`.
 
 ## Test
+
+From the repo root:
 
 ```
 python3 -I tests/validate.py
 ```
 
-## Licence
+## License
 
-MIT.
+MIT. See `LICENSE`.

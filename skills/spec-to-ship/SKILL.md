@@ -78,4 +78,4 @@ Rules: no UI means `ux.md` says "N/A: no UI" with one line why, never silently s
 
 ## Missing pieces
 
-If a named skill is not installed, say so and stop at that stage; do not improvise its output. `bash scripts/check.sh` lists what is missing.
+If a named skill is not installed, say so and stop at that stage; do not improvise its output. `bash scripts/check.sh` (from this skill's folder) or `bash skills/spec-to-ship/scripts/check.sh` (from the repo) lists what is missing.

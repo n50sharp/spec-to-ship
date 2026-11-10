@@ -20,7 +20,7 @@ Spec-kit needs Python 3.11+ and [uv](https://docs.astral.sh/uv/). Install the th
 ```
 uv tool install specify-cli
 hermes skills tap add witt3rd/oh-my-hermes
-hermes skills install omh-deep-research omh-deep-interview omh-ralplan omh-ralph
+hermes skills install omh-deep-research omh-deep-interview omh-ralplan omh-ralplan-driver omh-ralph omh-ralph-driver omh-ralph-task
 hermes plugins install obra/superpowers --enable
 specify init <dir> --integration hermes --ignore-agent-tools
 ```

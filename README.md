@@ -25,11 +25,7 @@ hermes plugins install obra/superpowers --enable
 specify init <dir> --integration hermes --ignore-agent-tools
 ```
 
-Check what is missing (run from this repo, or after installation):
-
-```
-bash skills/spec-to-ship/scripts/check.sh
-```
+After cloning and installing (below), the check script lists anything still missing.
 
 ## What a build delivers
 
@@ -53,7 +49,13 @@ git clone https://github.com/n50sharp/spec-to-ship.git
 bash spec-to-ship/install.sh
 ```
 
-This copies `skills/spec-to-ship` to `~/.hermes/skills/software-development/spec-to-ship`. Restart any active Hermes sessions so the skill loads.
+This copies `skills/spec-to-ship` to `~/.hermes/skills/software-development/spec-to-ship` and runs the dependency check. To re-run it later:
+
+```
+bash ~/.hermes/skills/software-development/spec-to-ship/scripts/check.sh
+```
+
+Restart any active Hermes sessions so the skill loads.
 
 ## Use
 

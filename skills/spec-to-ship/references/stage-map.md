@@ -11,6 +11,7 @@
 | 6 | Tasks | speckit-tasks, speckit-analyze | `specs/NNN-name/tasks.md` | no CRITICAL findings |
 | 7 | Bridge | this skill | `.omh/plans/ralph-plan.md` | every task testable |
 | 8 | Execute | omh-ralph or Kanban workers, superpowers:test-driven-development | code, tests, ticked tasks | evidence per task |
+| 5+ | Deliverable docs | see references/deliverables.md | `specs/NNN-name/docs/{ux,architecture,design,test-plan,test-report}.md`, README/runbook | exist, traced to FR IDs, match as-built |
 | 9 | Close | speckit-converge, superpowers:verification-before-completion, superpowers:requesting-code-review | review result | all verified this turn |
 
 ## Fallbacks

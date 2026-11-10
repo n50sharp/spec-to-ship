@@ -27,6 +27,21 @@ Check what is missing:
 bash skills/spec-to-ship/scripts/check.sh
 ```
 
+## What a build delivers
+
+Besides code and tests, every build ships its documents in `specs/<NNN>-<name>/docs/`, each citing spec requirement IDs:
+
+| Doc | Written at |
+|---|---|
+| `ux.md` (users, flows, screens, states, accessibility; "N/A: no UI" if none) | after Specify |
+| `architecture.md` (context, components, data flow, ADRs, risks) | Plan |
+| `design.md` (modules, interfaces, data model, errors, security) | Plan |
+| `test-plan.md` (strategy, cases mapped to acceptance criteria) | Tasks |
+| `test-report.md` (commands run, real output, gaps) | Close |
+| README / `runbook.md` (install, run, operate, roll back) | Close |
+
+At Close, each doc is reconciled with the built code; a doc that disagrees with the code fails the stage. Templates: `skills/spec-to-ship/references/deliverables.md`.
+
 ## Installation
 
 ```
@@ -38,7 +53,7 @@ This copies `skills/spec-to-ship` to `~/.hermes/skills/software-development/spec
 
 ## Use
 
-Ask Hermes to build something non-trivial. The skill's stages run in order: setup, research, constitution, intent, specify, plan, tasks, bridge, execute, close. See `skills/spec-to-ship/SKILL.md` and `references/`.
+Ask Hermes to build something non-trivial. The skill's stages run in order: setup, research, constitution, intent, specify, plan, tasks, bridge, execute, close, with the deliverable docs written along the way. See `skills/spec-to-ship/SKILL.md` and `references/`.
 
 ## Test
 

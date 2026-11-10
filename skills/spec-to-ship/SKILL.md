@@ -1,7 +1,7 @@
 ---
 name: spec-to-ship
 description: Use when starting a non-trivial build, feature or project that needs requirements, a plan, tasks and verified execution, before writing any code.
-version: 0.1.0
+version: 0.2.0
 license: MIT
 metadata:
   hermes:
